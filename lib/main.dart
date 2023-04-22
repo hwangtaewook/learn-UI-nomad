@@ -8,10 +8,12 @@ class Player {
 }
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,7 +36,7 @@ class App extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       const Text(
-                        'Hasadd',
+                        'haeun',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 28,
@@ -42,7 +44,7 @@ class App extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'asdaasdasdsd',
+                        'babo',
                         style: TextStyle(
                           color: Colors.white.withOpacity(0.8),
                           fontSize: 18,
@@ -76,9 +78,9 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Button(
                     text: 'Transfer',
                     bgColor: Color(0xFFF1B33B),
