@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widgets/button.dart';
+import 'package:toonflix/widgets/card.dart';
 
 class Player {
   String? name;
@@ -55,7 +56,7 @@ class App extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 120,
+                height: 100,
               ),
               Text(
                 'Total Balance',
@@ -92,6 +93,55 @@ class App extends StatelessWidget {
                     textColor: Colors.white,
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 39,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.8),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const CurrencyCard(
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
+                isInverted: false,
+              ),
+              const CurrencyCard(
+                name: 'Daller',
+                code: 'USD',
+                amount: '8 128',
+                icon: Icons.attach_money_rounded,
+                isInverted: true,
+              ),
+              const CurrencyCard(
+                name: 'Bitcoin',
+                code: 'BTC',
+                amount: '9 125',
+                icon: Icons.currency_bitcoin,
+                isInverted: false,
               ),
             ],
           ),
